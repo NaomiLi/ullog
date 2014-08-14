@@ -4,6 +4,13 @@
 # 
 # Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
 # 
+# Included Libs:
+#     SegmentTimedRotatingHanlder: inherited from logging.handlers.TimeRotatingHanlder. 
+#         TimeRotatingHanlder split log after certain interval from u start program(logging)
+#         but SegmentTimedRotatingHanlder need to split log at certain point--- not related to the start time
+#     LevelFilter / NotLevelFilter: filter for logging different level log to different suffix log file
+#     LogConfig: log config items for ullog
+#
 ########################################################################
  
 """
