@@ -2,14 +2,14 @@ ullog
 =====
      Module: Ullog
  
- Two Features:
-    1. U can configure different(by suffix) output log file for different level when logging
-       for instance: **.wf.log for WARNING and FATAL  while **.nt.log for NOTICE and DEBUG
-    2. Split log at certain interval time
-       Related configs are: interval_unit(eg, "M" minute) and interval(eg, "1")
-       This means that log file will be splitted at **:00, **:15, **:30, **:45, 
-       four splitter logs in one hour and of course, these files' name are tagged with time below
-       2014-08-14_19_00.log / 2014-08-14_19_15.log / 2014-08-14_19_30.log/ 2014-08-14_19_45.log
+      Two Features:
+          1. U can configure different(by suffix) output log file for different level when logging
+            for instance: **.wf.log for WARNING and FATAL  while **.nt.log for NOTICE and DEBUG
+           2. Split log at certain interval time
+              Related configs are: interval_unit(eg, "M" minute) and interval(eg, "1")
+              This means that log file will be splitted at **:00, **:15, **:30, **:45, 
+               four splitter logs in one hour and of course, these files' name are tagged with time below
+               2014-08-14_19_00.log / 2014-08-14_19_15.log / 2014-08-14_19_30.log/ 2014-08-14_19_45.log
 
  How to Use:
    import ullog
