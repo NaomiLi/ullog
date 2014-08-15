@@ -113,7 +113,7 @@ class Ullog(object):
             log_path = '%s.%s' % (log_path, suffix)
             file_handler = logging.FileHandler(log_path)
         else:
-            file_handler = _lib.SegmentTimeRotatingFileHandler(filename=log_path,
+            file_handler = _lib.CertainSegmentsTimeRotatingFileHandler(filename=log_path,
                                                           suffix=suffix,
                                                           when=self.log_config.interval_unit,
                                                           interval=self.log_config.interval)
