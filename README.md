@@ -28,7 +28,7 @@ ullog
             interval=1                
             interval_unit=H #hour   # options: [S, M, H, D] (means second, minute, hour, day)
             [WF_LEVEL]              # LEVEL config item must make "LEVEL" included
-            level=WARNING,FATAL     # level filter
+            level=WARNING,FATAL     # options: [DEBUG, INFO, WARNING, FATAL, ERROR]
             suffix=wf.log           # output log file's suffix
             [NT_LEVEL]
             level=INFO
