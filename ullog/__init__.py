@@ -35,12 +35,19 @@
 #   interval=1                
 #   interval_unit=H #hour   # options: [S, M, H, D] (means second, minute, hour, day)
 #   [WF_LEVEL]              # LEVEL config item must make "LEVEL" included
-#   level=WARNING,FATAL     # level filter
+#   level=WARNING,FATAL     # options: [DEBUG, INFO, WARNING, FATAL, ERROR]
 #   suffix=wf.log           # output log file's suffix
 #   [NT_LEVEL]
 #   level=INFO
 #   suffix=nt.log
 #   2.by ullog methods: basicConfig, addLevelHandler
+#   ul_log.basicConfig(level=ullog.INFO, 
+#                      directory='.', 
+#                      prefix="haha", 
+#                      is_split=1,
+#                      interval_unit='H',
+#                      interval=1)
+#   ul_log.addLevelHandler(level=ullog.WARNING, suffix="wf.log")
 #    
 ########################################################################
  
