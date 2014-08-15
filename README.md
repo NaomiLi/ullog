@@ -13,8 +13,8 @@ ullog
 
      How to Use:
            import ullog
-           ullog = Ullog.getInstance('test_name')
-           logger = ullog.getLogger()   
+           ul_log = ullog.Ullog.getInstance('test_name')
+           logger = ul_log.getLogger()   
            logger.warning('warning-test')
 
            Also, before start to logging, u can configure items below:
@@ -34,3 +34,10 @@ ullog
             level=INFO
             suffix=nt.log
            2.by ullog methods: basicConfig, addLevelHandler
+           ul_log.basicConfig(level=ullog.INFO, 
+                              directory='.', 
+                              prefix="haha", 
+                              is_split=1,
+                              interval_unit='H',
+                              interval=1)
+           ul_log.addLevelHandler(level=ullog.WARNING, suffix="wf.log")
