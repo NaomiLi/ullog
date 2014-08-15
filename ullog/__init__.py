@@ -20,8 +20,8 @@
 #
 # How to Use:
 #   import ullog
-#   ullog = Ullog.getInstance('test_name')
-#   logger = ullog.getLogger()   
+#   ul_log = ullog.Ullog.getInstance('test_name')
+#   logger = ul_log.getLogger()   
 #   logger.warning('warning-test')
 #
 #   Also, before start to logging, u can configure items below:
