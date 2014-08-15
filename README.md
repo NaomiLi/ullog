@@ -10,6 +10,10 @@ ullog
               This means that log file will be splitted at **:00, **:15, **:30, **:45, 
               four splitter logs in one hour and of course, these files' name are tagged with time below
               2014-08-14_19_00.log / 2014-08-14_19_15.log / 2014-08-14_19_30.log/ 2014-08-14_19_45.log
+     
+     How to Install
+          python setup.py build
+          python setup.py install
 
      How to Use:
            import ullog
