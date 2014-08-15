@@ -5,7 +5,7 @@
 # Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
 # 
 # Included Libs:
-#     SegmentTimedRotatingHanlder: inherited from logging.handlers.TimeRotatingHanlder. 
+#     CertainSegmentsTimedRotatingHanlder: inherited from logging.handlers.TimeRotatingHanlder. 
 #         TimeRotatingHanlder split log after certain interval from u start program(logging)
 #         but SegmentTimedRotatingHanlder need to split log at certain point--- not related to the start time
 #     LevelFilter / NotLevelFilter: filter for logging different level log to different suffix log file
@@ -51,7 +51,7 @@ class NotLevelFilter(object):
 
 
 INTERVAL_UNIT = ['S', 'M', 'H', 'D']
-class SegmentTimeRotatingFileHandler(_handler.TimedRotatingFileHandler):
+class CertainSegmentsTimeRotatingFileHandler(_handler.TimedRotatingFileHandler):
     """
         Handlers for logging to a file, rotaing log file at certain time,
         but not related to the time when u start logging
@@ -74,7 +74,7 @@ class SegmentTimeRotatingFileHandler(_handler.TimedRotatingFileHandler):
         if when.upper() not in INTERVAL_UNIT:
             raise TypeError("Invalid rollover interval specified: %s" % self.when)
         self.interval_num = interval
-        super(SegmentTimeRotatingFileHandler, self).__init__(
+        super(CertainSegmentsTimeRotatingFileHandler, self).__init__(
             filename, when, interval, backupCount, encoding, delay, utc)
         self.suffix += '.%s' % (suffix)
         self.prefix=filename
