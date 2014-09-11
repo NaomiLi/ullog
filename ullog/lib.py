@@ -81,16 +81,18 @@ class CertainSegmentsTimeRotatingFileHandler(_handler.TimedRotatingFileHandler):
 
         # to create the first timed file
  #       self.rolloverAt -= self.interval
-        self.doRollover() 
+        self.doRollover(first=1) 
         # remove the default file named by self.prefix
         if os.path.isfile(self.prefix):
             os.remove(self.prefix)
 
-    def doRollover(self):
+    def doRollover(self, first=0):
         if self.stream:
             self.stream.close()
             self.stream = None
         t = self.rolloverAt
+        if first:
+          t -= self.interval
         timeTuple = self.int2time(t)
         dfn = self.prefix + "." + time.strftime(self.suffix, timeTuple)
         self.baseFilename = dfn
